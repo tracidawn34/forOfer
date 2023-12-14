@@ -31,15 +31,9 @@ return trues
 }
 
 const makeFriendly = function(str1){
-  let str1 = `Do you see the story. Do you see anything. It seems to me I am trying to tell you a dream.`
-  let str2 = `Do you see the story! Do you see anything! It seems to me I am trying to tell you a dream!`
- for(let str2 of str1){
-  if(str2 !== str1){
-    str1 = str1 +1
-  }
-  }
-  return str2
-  }
+  
+}
+ 
 
 const cubeAll = function(arr){
   let newArr = [];
@@ -58,9 +52,18 @@ const addNoises = function(str){
 }
 
 const womenOnly = function(arr){
-let 
+
 }
 
+const integersOnly = function(num){
+  let integers = 0
+  for(let integers of num){
+    if(integers === num){
+      integers = integers +1
+    }
+  }
+  return integers
+}
 
   
 
