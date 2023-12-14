@@ -30,8 +30,16 @@ for(let boolean of arr){
 return trues
 }
 
-const makeFriendly = function(str1){
-  
+const makeFriendly = function(str){
+let newStr = ''
+for( let char of str){
+  if(char === '.'){
+    newStr = newStr + '!'
+  } else{
+    newStr = newStr + char
+  }
+}
+return newStr
 }
  
 
@@ -43,26 +51,38 @@ const cubeAll = function(arr){
   return newArr;
 }
 
-const addNoises = function(str){
-  let newArr = []
-  for(let sound of str){
-  newArr.push(sound, "WOOF", 'Meow', "RORW" )
+const addNoises = function(arr){
+  noisyArr = []
+  for(let animal of arr){
+    if(animal === 'Fido' && animal === 'Rolph' && animal === 'Maisie'){
+      noisyArr.push(animal + ' says "Woof!"')
+    }else if(animal === 'Garfield' || animal === 'Heathcliff'){
+      noisyArr.push(animal + 'says "Meow!"')
+    }else if(animal === 'Barnie' || animal=== 'Sharp Tooth'){
+noisyArr.push(animal + 'says "ROWR."')
+    }
   }
-  return newArr
+  return noisyArr
 }
 
 const womenOnly = function(arr){
-
+const women = []
+for( let person of arr){
+  if(person[person.length -1] === 'F'){
+    women.push(person)
+  }
+}
+return women
 }
 
-const integersOnly = function(num){
-  let integers = 0
-  for(let integers of num){
-    if(integers === num){
-      integers = integers +1
+const integersOnly = function(arr){
+  let integers = []
+  for(let num of arr){
+    if(num % 1 === 0){
+      integers.push(num)
     }
   }
-  return integers
+  return integers 
 }
 
   
